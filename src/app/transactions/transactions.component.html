@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h1>Nueva Transacción</h1>
+            <form [formGroup]="transactionForm" (submit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="type" class="form-label">Tipo de Transacción</label>
+                    <input type="text" class="form-control" formControlName="type" id="type" name="type" placeholder="Ingrese el tipo de transacción" required>
+                </div>
+                <div class="mb-3">
+                    <label for="source" class="form-label">Cuenta Origen</label>
+                    <input type="text" class="form-control" formControlName="source" id="source" name="source" placeholder="Ingrese la cuenta origen" required>
+                </div>
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Cuenta Destino</label>
+                    <input type="text" class="form-control" formControlName="destination" id="destination" name="destination" placeholder="Ingrese la cuenta destino" required>
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Monto</label>
+                    <input type="number" class="form-control" formControlName="amount" id="amount" name="amount" placeholder="Ingrese el monto" required>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoría</label>
+                    <input type="text" class="form-control" formControlName="category" id="category" name="category" placeholder="Ingrese la categoría" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="description" formControlName="description" name="description" rows="3" placeholder="Ingrese una descripción" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" [disabled]="transactionForm.invalid">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>

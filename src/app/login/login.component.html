@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 d-none d-md-block"> <!-- Columna izquierda solo visible en dispositivos medianos y grandes -->
+            <img src="../../assets/img/logo.jpg" class="img-fluid" alt="Entidad bancaria">
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Bienvenido, por favor inicia sesión
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="loginForm" (submit)="onSubmit()">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" formControlName="email" id="email" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Ingrese su contraseña">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginForm.invalid">Iniciar sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <a class="btn btn-primary" href="/signup" role="button">Registrarse</a>
+            </div>
+        </div>
+    </div>
+  </div>
